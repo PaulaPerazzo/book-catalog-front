@@ -33,7 +33,10 @@ export default function Signup() {
             <Subtitle>Sign Up</Subtitle>
             <Input label="Email"/>
             <Input label="Password"/>
-            <BigButton title="Sign Up" />
+            <BigButton 
+              title="Sign Up" 
+              onPress={() => router.replace('/Home')}
+            />
             <BodyText> Already have an account? </BodyText>
             <TextButton 
               title="Log in"

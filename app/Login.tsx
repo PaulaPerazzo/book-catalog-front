@@ -33,7 +33,10 @@ import { router } from "expo-router";
               <Subtitle>Log In</Subtitle>
               <Input label="Email"/>
               <Input label="Password"/>
-              <BigButton title="Log In" />
+              <BigButton 
+                title="Log In" 
+                onPress={() => router.replace('/Home')}
+              />
               <BodyText> Don't have an account? </BodyText>
               <TextButton 
                 title="Sing up"
