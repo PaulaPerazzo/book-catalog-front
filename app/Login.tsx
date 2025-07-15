@@ -10,6 +10,7 @@ import { Image,
   import Input from "./components/Input";
   import BigButton from "./components/BigButton";
   import TextButton from "./components/TextButton";
+import { router } from "expo-router";
   
   export default function Signup() {
     return (
@@ -34,7 +35,10 @@ import { Image,
               <Input label="Password"/>
               <BigButton title="Log In" />
               <BodyText> Don't have an account? </BodyText>
-              <TextButton title="Sing up"/>
+              <TextButton 
+                title="Sing up"
+                onPress={() => router.push('/Signup')}
+              />
             </Container>
           </ScrollView>
         </TouchableWithoutFeedback>
