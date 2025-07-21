@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { Platform, StyleSheet } from "react-native";
 
 export const Title = styled.Text`
     font-size: 32px;
@@ -19,3 +20,28 @@ export const BodyText = styled.Text`
     color: #1C1C1E;
     /* margin-top: 10px; */
 `;
+
+export const styles = StyleSheet.create({
+    actionButton: {
+      backgroundColor: "#fff",
+      paddingVertical: 10,
+      paddingHorizontal: 16,
+      borderRadius: 6,
+      
+      ...Platform.select({
+        ios: {
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.2,
+          shadowRadius: 3,
+        },
+        android: { elevation: 3 },
+      }),
+    },
+
+    actionText: {
+      fontSize: 14,
+      color: "#e33",
+      fontWeight: "500",
+    },
+  });

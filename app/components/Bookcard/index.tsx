@@ -1,33 +1,59 @@
+import { MaterialIcons } from "@expo/vector-icons";
+import React, { useState } from "react";
 import { 
     CardContainer, 
     TextContainer, 
     ContentContainer, 
     BookImage, 
     Title, 
-    Subtitle 
+    Subtitle,
+    MenuButton,
 } from "./styles";
+import { 
+    ImageSourcePropType, 
+    LayoutChangeEvent
+} from "react-native";
+import { CardLayout } from "@/app/types/cards";
 
-import type { ImageSourcePropType } from "react-native";
-  
-export default function Card(props: {
+type Props = {
+    id: number;
     title?: string;
     subtitle?: string;
     imageSource: ImageSourcePropType;
-}) {
-
-    if (!props.imageSource) {
+    onLayout: (id: number, layout: CardLayout) => void;
+    onPressMenu: (id: number) => void;
+};
+  
+export default function Card({
+    id,
+    title,
+    subtitle,
+    imageSource,
+    onLayout,
+    onPressMenu,
+}: Props) {
+    if (!imageSource) {
         throw new Error("Image source is required");
     }
 
     return (
-        <CardContainer>
+        <CardContainer
+            onLayout={(e: LayoutChangeEvent) => {
+                const { x, y, width, height } = e.nativeEvent.layout;
+                onLayout(id, { x, y, width, height });
+            }}
+        >
+            <MenuButton onPress={() => onPressMenu(id)}>
+                <MaterialIcons name="more-vert" size={24} color="#555" />
+            </MenuButton>
+  
             <ContentContainer>
-                <BookImage source={props.imageSource} />
+                <BookImage source={imageSource} />
                 <TextContainer>
-                    <Title> {props.title} </Title>
-                    <Subtitle> {props.subtitle} </Subtitle>
+                    <Title>{title}</Title>
+                    <Subtitle>{subtitle}</Subtitle>
                 </TextContainer>
             </ContentContainer>
-        </CardContainer>
+      </CardContainer>
     );
 }
