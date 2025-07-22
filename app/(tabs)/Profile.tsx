@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Container, Title, Subtitle } from '@/components/global.styles';
+import { BodyText } from './styles';
+import BookCount from '@/components/BookCount';
 
 export default function Profile() {
   return (
-    <View style={{ flex:1, justifyContent:'center', alignItems:'center' }}>
-      <Text>PROFILE Screen</Text>
-    </View>
+    <Container>
+      <Title> App Title </Title>
+      <Subtitle> Profile </Subtitle>
+
+      <BodyText>login@gmail.com</BodyText>
+
+      <BookCount count={100}/>
+    </Container>
   );
 }
