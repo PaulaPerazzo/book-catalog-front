@@ -19,8 +19,6 @@ type Props = {
   onTabPress: (route: string) => void;
 };
 
-console.log("BottomMenu component loaded");
-
 export default function BottomMenu({ currentRoute, onTabPress }: Props) {
   return (
     <MenuContainer>

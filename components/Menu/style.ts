@@ -10,8 +10,9 @@ export const MenuContainer = styled.View`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border-top-width: 1px;
+  padding-bottom: 8px;
   border-top-color: #eee;
+  height: 80px;
 `;
 
 export const TabButton = styled.TouchableOpacity`

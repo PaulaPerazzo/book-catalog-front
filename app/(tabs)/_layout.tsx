@@ -9,8 +9,6 @@ export default function TabsLayout() {
   type TabRoute = typeof TAB_ROUTES[number];
   type PathRoute = `/${TabRoute}`;         
 
-  console.log("TabsLayout component loaded");
-
   const segments = useSegments();
   const current = segments[segments.length - 1];
   const router  = useRouter();
