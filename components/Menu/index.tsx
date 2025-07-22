@@ -33,7 +33,7 @@ export default function BottomMenu({ currentRoute, onTabPress }: Props) {
             <Ionicons
               name={isActive ? tab.activeIcon : tab.icon}
               size={32}
-              color={isActive ? '#6C63FF' : '#888'}
+              color={isActive ? '#8C78FC' : '#888'}
             />
           </TabButton>
         );
