@@ -1,11 +1,5 @@
-import { Text, View } from "react-native";
-import Signup from "./Signup";
-import Login from "./Login";
-import Home from "./Home";
+import { Redirect } from 'expo-router';
 
 export default function Index() {
-  return (
-    // <Login/>
-    <Home/>
-  );
+  return <Redirect href="/Login" />;
 }

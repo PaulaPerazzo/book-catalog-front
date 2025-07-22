@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Container } from "./components/signup/styles";
-import { Title, Subtitle, styles } from "./components/global.styles";
-import Card from "./components/Bookcard";
+import { Container } from "../../components/global.styles";
+import { Title, Subtitle, styles } from "../../components/global.styles";
+import Card from "../../components/Bookcard";
 import {
   View,
   Modal,
@@ -15,7 +15,7 @@ import {
   StyleSheet,
 } from "react-native";
 import { BlurView } from "expo-blur";
-import { CardLayout } from "./types/cards";
+import { CardLayout } from "../types/cards";
 
 export default function Home() {
   const coverImage = require("/Users/paulaperazzo/Documents/projects/book_categorizer/book cataloging app front/book-cataloging-app-front/app/image/cover.jpg");

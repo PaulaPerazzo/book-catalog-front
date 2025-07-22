@@ -4,15 +4,15 @@ import { Image,
     ScrollView,
     TouchableWithoutFeedback,
     Keyboard 
-  } from "react-native";
-  import { Container } from "./components/signup/styles";
-  import { Title, Subtitle, BodyText } from "./components/global.styles";
-  import Input from "./components/Input";
-  import BigButton from "./components/BigButton";
-  import TextButton from "./components/TextButton";
+} from "react-native";
+import { Container } from "../components/global.styles";
+import { Title, Subtitle, BodyText } from "../components/global.styles";
+import Input from "../components/Input";
+import BigButton from "../components/BigButton";
+import TextButton from "../components/TextButton";
 import { router } from "expo-router";
   
-  export default function Signup() {
+  export default function Login() {
     return (
       <KeyboardAvoidingView
         style={{ flex: 1 }}
@@ -48,4 +48,3 @@ import { router } from "expo-router";
       </KeyboardAvoidingView>
     );
   }
-  

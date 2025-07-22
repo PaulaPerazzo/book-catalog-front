@@ -5,11 +5,11 @@ import { Image,
   TouchableWithoutFeedback,
   Keyboard 
 } from "react-native";
-import { Container } from "./components/signup/styles";
-import { Title, Subtitle, BodyText } from "./components/global.styles";
-import Input from "./components/Input";
-import BigButton from "./components/BigButton";
-import TextButton from "./components/TextButton";
+import { Container } from "../components/global.styles";
+import { Title, Subtitle, BodyText } from "../components/global.styles";
+import Input from "../components/Input";
+import BigButton from "../components/BigButton";
+import TextButton from "../components/TextButton";
 import { router } from "expo-router";
 
 export default function Signup() {
@@ -40,7 +40,7 @@ export default function Signup() {
             <BodyText> Already have an account? </BodyText>
             <TextButton 
               title="Log in"
-              onPress={() => router.push('/')}
+              onPress={() => router.push('/Home')}
             />
           </Container>
         </ScrollView>

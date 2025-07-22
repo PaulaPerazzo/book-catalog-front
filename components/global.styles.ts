@@ -45,3 +45,11 @@ export const styles = StyleSheet.create({
       fontWeight: "500",
     },
   });
+
+export const Container = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 30px;
+`;
