@@ -61,11 +61,7 @@ export default function Capture() {
     // TODO: aqui você pode buscar metadados do livro via API e/ou navegar
     console.log('ISBN detectado:', isbn);
 
-    // Exemplo: voltar para Home com o ISBN (ou abrir tela de confirmação)
-    // router.push({ pathname: '/home', params: { isbn } });
-
-    // reabilita leitura após 1.5s (ou só ao voltar de outra tela)
-    cooldown.current && clearTimeout(cooldown.current);
+    if (cooldown.current !== null) clearTimeout(cooldown.current);
     cooldown.current = setTimeout(() => setScanningEnabled(true), 1500);
 
     setShowAdded(true);
@@ -73,7 +69,6 @@ export default function Capture() {
 
   const closeModal = () => {
     setShowAdded(false);
-    // reabilita a leitura para continuar usando a câmera na mesma tela
     setScanningEnabled(true);
   };
 
