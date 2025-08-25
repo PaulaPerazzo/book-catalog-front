@@ -78,7 +78,7 @@ export default function Capture() {
     return (
       <Screen>
         <Header>
-          <Title>App Title</Title>
+          <Title>My Library</Title>
           <CloseBtn onPress={() => router.back()}><CloseText>×</CloseText></CloseBtn>
         </Header>
         <InfoText>Precisamos da permissão da câmera.</InfoText>
@@ -92,7 +92,7 @@ export default function Capture() {
   return (
     <Screen>
       <Header>
-        <Title>App Title</Title>
+        <Title>My Library</Title>
         <CloseBtn onPress={() => router.back()}><CloseText>×</CloseText></CloseBtn>
       </Header>
 

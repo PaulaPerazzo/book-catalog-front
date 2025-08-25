@@ -22,7 +22,7 @@ export default function Profile() {
   return (
     <>
       <Container>
-        <Title> App Title </Title>
+        <Title> My Library </Title>
         <Subtitle> Profile </Subtitle>
 
         <ContentContainer>

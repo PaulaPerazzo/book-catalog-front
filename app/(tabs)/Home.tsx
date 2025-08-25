@@ -1,20 +1,19 @@
-import React, { useState } from "react";
-import { Container } from "../../components/global.styles";
-import { Title, Subtitle, styles } from "../../components/global.styles";
-import Card from "../../components/Bookcard";
-import {
-  View,
-  Modal,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  ScrollView,
-  KeyboardAvoidingView,
-  Platform,
-  Keyboard,
-  Text,
-  StyleSheet,
-} from "react-native";
 import { BlurView } from "expo-blur";
+import React, { useState } from "react";
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
+import Card from "../../components/Bookcard";
+import { Container, Subtitle, Title, styles } from "../../components/global.styles";
 import { CardLayout } from "../types/cards";
 
 export default function Home() {
@@ -45,7 +44,7 @@ export default function Home() {
           keyboardShouldPersistTaps="handled"
         >
           <Container>
-            <Title>Book Catalog</Title>
+            <Title>My Library</Title>
             <Subtitle>Home</Subtitle>
             {[0, 1, 2, 3].map((i) => (
               <Card

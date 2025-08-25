@@ -1,16 +1,16 @@
-import { Image,
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    TouchableWithoutFeedback,
-    Keyboard 
-} from "react-native";
-import { Container } from "../components/global.styles";
-import { Title, Subtitle, BodyText } from "../components/global.styles";
-import Input from "../components/Input";
-import BigButton from "../components/BigButton";
-import TextButton from "../components/TextButton";
 import { router } from "expo-router";
+import {
+  Image,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  TouchableWithoutFeedback
+} from "react-native";
+import BigButton from "../components/BigButton";
+import { BodyText, Container, Subtitle, Title } from "../components/global.styles";
+import Input from "../components/Input";
+import TextButton from "../components/TextButton";
   
   export default function Login() {
     return (
@@ -29,7 +29,7 @@ import { router } from "expo-router";
                 style={{ width: 120, height: 120, marginBottom: 25 }}
                 resizeMode="contain"
               />
-              <Title>Book Catalog</Title>
+              <Title>My Library</Title>
               <Subtitle>Log In</Subtitle>
               <Input label="Email"/>
               <Input label="Password"/>
