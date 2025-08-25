@@ -4,7 +4,7 @@ import ConfirmModal from '@/components/Modal';
 import TextButtonProfile from '@/components/TextButtonProfile';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { BodyText, ButtonContainers, ContentContainer, DelveloperText } from './styles';
+import { BodyText, ButtonContainers, ContentContainer, DeveloperText } from './styles';
 
 export default function Profile() {
   const [showLogout, setShowLogout] = useState(false);
@@ -84,12 +84,12 @@ export default function Profile() {
         cancelText="No"
         onConfirm={() => {
           setShowPDF(false);
-          console.log('account deleted');
+          console.log('export to PDF requested');
         }}
         onCancel={() => setShowPDF(false)}
       />
 
-      <DelveloperText>Developed by Paula Perazzo</DelveloperText>
+      <DeveloperText>Developed by Paula Perazzo</DeveloperText>
     </>
   );
 }

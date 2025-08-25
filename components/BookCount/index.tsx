@@ -11,7 +11,7 @@ export default function BookCount({
 
     return (
         <Container>
-            <CountText> {count} </CountText>
+            <CountText>{count}</CountText>
             <DescriptionText> Books registered </DescriptionText>
         </Container>
     );

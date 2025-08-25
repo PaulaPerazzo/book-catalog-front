@@ -21,10 +21,10 @@ export const ButtonContainers = styled.View`
     /* gap: 16px; */
 `;
 
-export const DelveloperText = styled.Text`
+export const DeveloperText = styled.Text`
     font-size: 12px;
     color: #6E6E73;
-    font-weight: lighter italic;
+    font-weight: lighter;
     font-style: italic;
     text-align: center;
     /* margin-bottom: 0px; */
