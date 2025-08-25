@@ -9,6 +9,7 @@ import { BodyText, ButtonContainers, ContentContainer, DelveloperText } from './
 export default function Profile() {
   const [showLogout, setShowLogout] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
+  const [showPDF, setShowPDF] = useState(false);
 
   const router = useRouter();
 
@@ -32,7 +33,7 @@ export default function Profile() {
             <TextButtonProfile 
                 title="Export list to PDF"
                 icon="📄"
-                onPress={() => {console.log('export to pdf');}}
+                onPress={() => setShowPDF(true)}
                 />
               <TextButtonProfile 
                 title="Log out"
@@ -73,6 +74,19 @@ export default function Profile() {
           console.log('account deleted');
         }}
         onCancel={() => setShowDelete(false)}
+      />
+
+      <ConfirmModal
+        visible={showPDF}
+        title="Export list to PDF"
+        message="IN DEVELOPMENT: This feature is coming soon!"
+        confirmText="Yes"
+        cancelText="No"
+        onConfirm={() => {
+          setShowPDF(false);
+          console.log('account deleted');
+        }}
+        onCancel={() => setShowPDF(false)}
       />
 
       <DelveloperText>Developed by Paula Perazzo</DelveloperText>
