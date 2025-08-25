@@ -2,12 +2,21 @@ import BookCount from '@/components/BookCount';
 import { Container, Subtitle, Title } from '@/components/global.styles';
 import ConfirmModal from '@/components/Modal';
 import TextButtonProfile from '@/components/TextButtonProfile';
+import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { BodyText, ButtonContainers, ContentContainer, DelveloperText } from './styles';
 
 export default function Profile() {
   const [showLogout, setShowLogout] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
+
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    setShowLogout(false);
+    // await logout();
+    router.replace('Login');
+  };
 
   return (
     <>
@@ -28,13 +37,11 @@ export default function Profile() {
               <TextButtonProfile 
                 title="Log out"
                 icon="🚪"
-                // onPress={() => {console.log('log out');}}
                 onPress={() => setShowLogout(true)}
                 />
               <TextButtonProfile 
                 title="Delete account"
                 icon="🗑️"
-                // onPress={() => {console.log('delete account');}}
                 onPress={() => setShowDelete(true)}
                 />
           </ButtonContainers>
@@ -48,8 +55,9 @@ export default function Profile() {
         confirmText="Yes"
         cancelText="No"
         onConfirm={() => {
-          setShowLogout(false);
-          console.log('logged out');
+          // setShowLogout(false);
+          // console.log('logged out');
+          handleLogout();
         }}
         onCancel={() => setShowLogout(false)}
       />
