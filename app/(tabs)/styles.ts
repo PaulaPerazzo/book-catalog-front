@@ -12,11 +12,12 @@ export const ContentContainer = styled.View`
 `;
 
 export const ButtonContainers = styled.View`
+    display: flex;
     margin-top: 16%;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    /* margin-left: 25%; */
+    margin-left: 25%;
     /* gap: 16px; */
 `;
 
