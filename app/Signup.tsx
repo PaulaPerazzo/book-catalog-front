@@ -40,7 +40,7 @@ export default function Signup() {
             <BodyText> Already have an account? </BodyText>
             <TextButton 
               title="Log in"
-              onPress={() => router.push('/Home')}
+              onPress={() => router.push('/Login')}
             />
           </Container>
         </ScrollView>

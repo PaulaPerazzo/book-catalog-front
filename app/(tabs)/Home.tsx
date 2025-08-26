@@ -96,7 +96,7 @@ export default function Home() {
                   handleDelete(openCardId);
                 }}
               >
-                <Text style={styles.actionText}>Remover livro</Text>
+                <Text style={styles.actionText}>Delete book</Text>
               </TouchableOpacity>
             </View>
         </Modal>
